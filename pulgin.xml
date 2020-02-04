@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO comments, header -->
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android" id="de.eportrait.cordova.plugins.CordovaNativeBridge" version="0.0.1">
+    <name>CordovaNativeBridge</name>
+    <description>Cordova Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova, plugin, boilerplate, android, ios</keywords>
+    <repo>https://github.com/kovacs-tamas/cordova-native-bridge.git</repo>
+    <issue>https://github.com/kovacs-tamas/cordova-native-bridge/issues</issue>
+
+    <js-module src="www/CordovaNativeBridge.js" name="CordovaNativeBridge">
+        <clobbers target="CordovaNativeBridge" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CordovaNativeBridge">
+                <param name="android-package" value="de.eportrait.cordova.plugins.CordovaNativeBridge"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/de/eportrait/cordova/plugins/CordovaNativeBridge.java" target-dir="src/de/eportrait/cordova/plugins/"/>
+    </platform>
+</plugin>
