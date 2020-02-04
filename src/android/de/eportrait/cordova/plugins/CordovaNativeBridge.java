@@ -15,7 +15,7 @@ import android.util.Log;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CordovaBoilerPlatePlugin extends CordovaPlugin {
+public class CordovaNativeBridge extends CordovaPlugin {
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
